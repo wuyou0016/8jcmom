@@ -50,32 +50,31 @@
     "status": "active",
     "vendor": {
       "officialWebsite": "https://wep01.breezenetaff.com/#/?code=XzOO248D",
-      "description": "对比表里唯一需要先过注册墙才能看到套餐详情的一家——这不是说它有问题，只是在'资料获取门槛'这一项上，明显比无忧链接多一道手续，值得在对比时单独标出来。",
-      "pricing": [{ "name": "入门套餐", "price": "约¥11/月起", "billingCycle": "yearly", "trafficQuota": "100GB" }],
+      "description": "对比表里唯一需要先过注册墙才能看到套餐详情的一家——不过乘风档的价格站长已经直接确认了（¥27/月，200GB），不用再靠第三方猜测这一项。",
+      "pricing": [{ "name": "乘风", "price": "¥27/月", "billingCycle": "monthly", "trafficQuota": "200GB" }],
       "routes": ["IEPL（第三方资料）"],
       "regions": ["香港", "新加坡", "日本", "美国"],
       "source": {
-        "type": "third-party",
-        "sourceUrl": "https://maitizi.com/weifeng",
+        "type": "editorial",
         "retrievedAt": "2026-09-25",
-        "claim": "官网需注册账号，价格与线路信息来自第三方转述，未经独立核验"
+        "claim": "乘风档¥27/月/200GB价格由站长直接确认；线路等其他细节仍来自第三方转述，未经独立核验"
       }
     },
     "thirdPartyNotes": [
       {
         "source": "买梯子导航 maitizi.com",
         "sourceUrl": "https://maitizi.com/weifeng",
-        "claim": "测速数据当前标注'整理中'，暂无具体数字",
+        "claim": "该来源记录的是另一档入门套餐（约¥11/月起，100GB），与站长确认的乘风档（27元/200GB）大概率是不同档位；测速数据当前标注'整理中'，暂无具体数字",
         "date": "2026-09-25"
       }
     ],
     "editorial": {
-      "pros": ["IEPL 专线定位在同价位段里不算少见但依然是加分项"],
-      "cons": ["资料获取门槛高于对比表里的大多数品牌，横向比较时信息不对等", "无任何测速数据支撑"],
-      "suitableFor": ["不介意先注册再核实细节的用户"],
-      "notSuitableFor": ["想不注册就能横向比价的用户——这类用户建议先看无忧链接"],
-      "summary": "单看价格区间，微风网络和其他几家入门专线套餐差距不大，真正拉开对比差距的是'资料获取成本'这一项，购买前建议先注册确认一遍。",
-      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+      "pros": ["价格已由站长直接确认（¥27/月，200GB），不是单一第三方猜测", "IEPL 专线定位明确"],
+      "cons": ["流量档位（200GB）比对比表里几家入门套餐更大，单价也相应更高，轻度用户未必划算", "协议、节点等细节仍缺第一手资料"],
+      "suitableFor": ["用量在200GB左右、不介意先注册再核实其他细节的用户"],
+      "notSuitableFor": ["预算优先、用量不大的轻度用户——这类用户建议对比无忧链接或飞猫云的入门档"],
+      "summary": "价格这一项已经从'第三方猜测'变成'站长确认'，对比表里可信度提升了一档；但200GB的档位单价高于其他入门套餐，是否划算取决于你的实际用量。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "价格部分为站长直接确认；其余判断基于第三方资料整理后的对比结论" }
     },
     "lastVerified": "2026-09-25",
     "createdAt": "2026-09-25",
