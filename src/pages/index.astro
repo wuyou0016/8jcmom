@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeHero from '../components/HomeHero.astro';
 import StatsBar from '../components/StatsBar.astro';
-import Top6Grid from '../components/Top6Grid.astro';
+import CompareSnippet from '../components/CompareSnippet.astro';
 import { isDemoEntry } from '../data/utils/demo-filter';
 import { getPublishableProviders } from '../data/utils/provider-publish-gate';
 import { getRankingPageData } from '../data/utils/ranking-entries';
@@ -19,17 +19,17 @@ const [articles, publishableProviders, { entries: overallEntries }] = await Prom
   getRankingPageData('overall'),
 ]);
 
-const top6Entries = overallEntries.slice(0, 7);
+const compareEntries = overallEntries.slice(0, 7);
 
-// TOP6 是首页可见内容里唯一的真实排名列表，ItemList 里只放名称+链接，
+// 首页对比表是可见内容里唯一的真实排名列表，ItemList 里只放名称+链接，
 // 不带任何评分/评级字段——当前数据模型里没有可靠的客观评分，写了就是虚构。
-const top6ItemListJsonLd =
-  top6Entries.length > 0
+const compareItemListJsonLd =
+  compareEntries.length > 0
     ? {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: '2026机场推荐 综合榜 TOP 7',
-        itemListElement: top6Entries.map((entry, index) => ({
+        name: '机场横向对比 前7位',
+        itemListElement: compareEntries.map((entry, index) => ({
           '@type': 'ListItem',
           position: index + 1,
           name: entry.providerName,
@@ -44,30 +44,21 @@ const top6ItemListJsonLd =
   description="机场荟把不同机场代理服务商的价格、协议、线路和资料透明度放进同一套维度并排呈现，标注每条信息的来源与可信度层级，帮你更快缩小选择范围。"
   keywords={['机场对比', '机场横向对比', '机场代理', '机场选购', '机场荟']}
 >
-  <HomeHero entries={overallEntries} />
+  <HomeHero />
 
   <div class="container">
     <StatsBar providerCount={publishableProviders.length} rankingCount={RANKING_PAGE_COUNT} articleCount={articles.length} />
 
-    <section class="section" id="top6">
-      <div class="section__head">
-        <div>
-          <span class="section__eyebrow">综合推荐</span>
-          <h2>TOP 7</h2>
+    {
+      compareEntries.length > 0 ? (
+        <CompareSnippet entries={compareEntries} providers={publishableProviders} />
+      ) : (
+        <div class="empty-state">
+          <p class="empty-state__title">当前暂无符合发布条件的服务商</p>
+          <p>数据不足时我们不会为了凑数而给出对比，等有服务商满足发布门槛后会自动出现在这里。</p>
         </div>
-        <a class="section__more" href="/rankings/">查看机场推荐排行榜 →</a>
-      </div>
-      {
-        top6Entries.length > 0 ? (
-          <Top6Grid entries={top6Entries} />
-        ) : (
-          <div class="empty-state">
-            <p class="empty-state__title">当前暂无符合发布条件的服务商</p>
-            <p>数据不足时我们不会为了凑数而给出排名，等有服务商满足发布门槛后会自动出现在这里。</p>
-          </div>
-        )
-      }
-    </section>
+      )
+    }
 
     <section class="section">
       <div class="section__head">
@@ -106,5 +97,5 @@ const top6ItemListJsonLd =
     </section>
   </div>
 
-  {top6ItemListJsonLd && <script type="application/ld+json" set:html={JSON.stringify(top6ItemListJsonLd)} />}
+  {compareItemListJsonLd && <script type="application/ld+json" set:html={JSON.stringify(compareItemListJsonLd)} />}
 </BaseLayout>

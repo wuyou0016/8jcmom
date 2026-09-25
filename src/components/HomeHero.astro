@@ -1,19 +1,14 @@
 ---
-import RecommendationPanel from './RecommendationPanel.astro';
-import type { RankingComputation } from '../data/utils/ranking-scoring';
-
-interface Props {
-  entries: RankingComputation[];
-}
-
-const { entries } = Astro.props;
+// 机场荟首页 Hero 不再放"排名侧栏"——那是机场吧首页的结构，这里改用
+// 下方紧跟着的横向对比表（CompareSnippet）来承载"一眼看几家"这个需求，
+// Hero 本身回归单栏、更聚焦在"这个站是干什么的"这句话上。
 ---
 
 <section class="hero">
   <div class="hero__backdrop" aria-hidden="true"></div>
 
   <div class="container">
-    <div class="hero__top">
+    <div class="hero__top hero__top--single">
       <div>
         <span class="hero__eyebrow-badge">横向对比 · 如实标注 · 持续补充</span>
         <h1>
@@ -71,8 +66,6 @@ const { entries } = Astro.props;
           </a>
         </div>
       </div>
-
-      <RecommendationPanel entries={entries} />
     </div>
   </div>
 </section>

@@ -1086,6 +1086,13 @@ td {
     align-items: start;
     gap: 4rem;
   }
+
+  /* 机场荟首页 Hero 不放排名侧栏（改用下方的横向对比表），
+     单栏内容需要限制最大宽度，不然会在宽屏上被拉得过宽、不好读。 */
+  .hero__top--single {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 44rem;
+  }
 }
 
 /* -------------------- Hero Features（三个诚实的定位说明，不是产品评分） -------------------- */
@@ -1141,9 +1148,11 @@ td {
   margin-top: var(--space-8);
 }
 
+/* 3 项真实指标（去掉了编造的"用户信赖"那第4项）：小屏沿用两列（第3项
+   自动换到第二行居左），宽屏切三等分，不再是原来给4项设计的两列/四列。 */
 @media (min-width: 64rem) {
   .stat-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -2072,3 +2081,82 @@ td {
   color: var(--color-text);
 }
 
+
+/* -------------------- Compare Snippet（首页横向对比表，机场荟独有，
+   区别于机场吧首页的"排名列表+卡片网格"结构） -------------------- */
+
+.compare-snippet__table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-snippet__table {
+  margin-bottom: 0;
+  min-width: 42rem;
+}
+
+.compare-snippet__table th {
+  color: var(--color-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.compare-snippet__table td {
+  vertical-align: middle;
+}
+
+.compare-snippet__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.compare-snippet__brand a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.compare-snippet__brand a:hover {
+  color: var(--color-primary);
+}
+
+.compare-snippet__status {
+  display: inline-flex;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.compare-snippet__status--full {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.compare-snippet__status--partial {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.compare-snippet__link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.compare-snippet__link:hover {
+  text-decoration: underline;
+}
+
+.compare-snippet__note {
+  margin-top: var(--space-4);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}

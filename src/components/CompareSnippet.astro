@@ -1,0 +1,95 @@
+---
+import type { RankingComputation } from '../data/utils/ranking-scoring';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entries: RankingComputation[];
+  providers: CollectionEntry<'providers'>[];
+}
+
+const { entries, providers } = Astro.props;
+
+function findProvider(id: string) {
+  return providers.find((p) => p.id === id);
+}
+
+function firstPrice(provider: CollectionEntry<'providers'> | undefined): string {
+  const plan = provider?.data.vendor.pricing?.[0];
+  if (!plan) return '暂无公开资料';
+  return plan.trafficQuota ? `${plan.price} · ${plan.trafficQuota}` : plan.price;
+}
+
+function firstOf(list: string[] | undefined): string {
+  return list && list.length > 0 ? list[0]! : '暂无公开资料';
+}
+
+function dataStatus(provider: CollectionEntry<'providers'> | undefined): { label: string; tone: 'full' | 'partial' } {
+  const hasPricing = (provider?.data.vendor.pricing?.length ?? 0) > 0;
+  return hasPricing ? { label: '资料相对完整', tone: 'full' } : { label: '资料有限', tone: 'partial' };
+}
+---
+
+<section class="section compare-snippet">
+  <div class="section__head">
+    <div>
+      <span class="section__eyebrow">横向对比</span>
+      <h2>同一套维度，摆在一起看</h2>
+    </div>
+    <a class="section__more" href="/comparisons/">查看完整对比表 →</a>
+  </div>
+
+  <div class="compare-snippet__table-wrap">
+    <table class="compare-snippet__table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>入门价格</th>
+          <th>主要协议</th>
+          <th>线路类型</th>
+          <th>资料状态</th>
+          <th aria-label="操作"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          entries.map((entry) => {
+            const provider = findProvider(entry.providerId);
+            const status = dataStatus(provider);
+            return (
+              <tr>
+                <td class="compare-snippet__brand">
+                  <a
+                    href={`/airports/${entry.providerSlug}/`}
+                    data-analytics-event="recommendation_card_click"
+                    data-provider={entry.providerSlug}
+                    data-provider-name={entry.providerName}
+                    data-cta-label="首页对比表"
+                  >
+                    {entry.providerName}
+                  </a>
+                  {entry.finalRank === 1 && <span class="rec-tag">首位对比</span>}
+                </td>
+                <td>{firstPrice(provider)}</td>
+                <td>{firstOf(provider?.data.vendor.protocols)}</td>
+                <td>{firstOf([...(provider?.data.vendor.routes ?? []), ...(provider?.data.vendor.regions ?? [])])}</td>
+                <td>
+                  <span class={`compare-snippet__status compare-snippet__status--${status.tone}`}>{status.label}</span>
+                </td>
+                <td>
+                  <a class="compare-snippet__link" href={`/airports/${entry.providerSlug}/`}>
+                    查看 →
+                  </a>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="compare-snippet__note">
+    价格与协议信息整理自第三方资料，标注"资料有限"的品牌暂无公开套餐信息，具体请以官网结算页为准。完整对比维度（含线路类型详解、资料来源）看
+    <a href="/comparisons/">对比表</a>。
+  </p>
+</section>

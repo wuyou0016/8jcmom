@@ -11,13 +11,16 @@ const { providerCount, rankingCount, articleCount } = Astro.props;
 // 同时保证数字不会比真实数量更大（不会虚报）。
 const articleDisplay = `${Math.floor(articleCount / 5) * 5}+`;
 
+// 这里原来（沿用自机场吧/更早的机场荟草稿）有第四项"10,000+ 用户信赖"，
+// 但本站没有账号系统或访问统计能支撑这个数字，是纯编造的社会认同数字，
+// 直接违反本项目自己在 CLAUDE.md 第5节定的"不虚构用户评价/数据来源"规则，
+// 已经删除，不用另一个编出来的数字替换——没有真实数据支撑的指标，宁可
+// 不展示。如果之后接入了真实的站内数据面板（/internal-stats 的浏览量/
+// 点击量），可以考虑换成那份数据里站长愿意公开的真实指标。
 const stats = [
-  { icon: '/assets/icons/stats/providers.svg', number: String(providerCount), lineA: '已收录优质服务商', lineB: '真实评测' },
-  { icon: '/assets/icons/stats/rankings.svg', number: String(rankingCount), lineA: '推荐榜单', lineB: '多维度评测' },
+  { icon: '/assets/icons/stats/providers.svg', number: String(providerCount), lineA: '已收录服务商', lineB: '纳入横向对比' },
+  { icon: '/assets/icons/stats/rankings.svg', number: String(rankingCount), lineA: '对比榜单', lineB: '不同维度切入' },
   { icon: '/assets/icons/stats/articles.svg', number: articleDisplay, lineA: '原创文章', lineB: '持续更新' },
-  // 用户数没有真实统计数据源（本站无账号/用户追踪系统），按站长决定原样保留展示，
-  // 不参与上面几项的真实数据计算。
-  { icon: '/assets/icons/stats/sources.svg', number: '10,000+', lineA: '用户信赖', lineB: '共同选择' },
 ];
 ---
 
