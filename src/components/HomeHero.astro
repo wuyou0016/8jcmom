@@ -1,0 +1,78 @@
+---
+import RecommendationPanel from './RecommendationPanel.astro';
+import type { RankingComputation } from '../data/utils/ranking-scoring';
+
+interface Props {
+  entries: RankingComputation[];
+}
+
+const { entries } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero__backdrop" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__top">
+      <div>
+        <span class="hero__eyebrow-badge">横向对比 · 如实标注 · 持续补充</span>
+        <h1>
+          机场怎么选，摆在一起比
+          <br />
+          <span class="hero__accent">机场荟</span>
+        </h1>
+        <p class="hero__subtitle">
+          把不同机场代理服务商的价格、协议、线路放进同一套维度里并排呈现，资料来源和可信度层级都标注清楚，帮你更快缩小选择范围，而不是替你下结论。
+        </p>
+
+        <ul class="hero__features">
+          <li>
+            <img class="hero__feature-icon" src="/assets/icons/features/shield.svg" alt="" aria-hidden="true" />
+            <span>
+              <strong>来源可查</strong>
+              每条数据都标注出处
+            </span>
+          </li>
+          <li>
+            <img class="hero__feature-icon" src="/assets/icons/features/bolt.svg" alt="" aria-hidden="true" />
+            <span>
+              <strong>统一维度</strong>
+              同一套标准放在一起比
+            </span>
+          </li>
+          <li>
+            <img class="hero__feature-icon" src="/assets/icons/features/diamond.svg" alt="" aria-hidden="true" />
+            <span>
+              <strong>不遮不掩</strong>
+              资料不全就写不全
+            </span>
+          </li>
+        </ul>
+
+        <div class="hero__ctas">
+          <span class="hero__cta-glow-wrap">
+            <img class="hero__cta-glow asset-dark" src="/assets/glow/dark/cta.svg" alt="" aria-hidden="true" />
+            <img class="hero__cta-glow asset-light" src="/assets/glow/light/cta.svg" alt="" aria-hidden="true" />
+            <a class="button button--primary button--large" href="/rankings/">
+              <img class="button__bg asset-dark" src="/assets/buttons/primary-dark.svg" alt="" aria-hidden="true" />
+              <img class="button__bg asset-light" src="/assets/buttons/primary-light.svg" alt="" aria-hidden="true" />
+              <span class="button__text">看横向对比榜 →</span>
+            </a>
+          </span>
+          <a class="button button--large" href="/comparisons/">
+            <img class="button__bg asset-dark" src="/assets/buttons/secondary-dark.svg" alt="" aria-hidden="true" />
+            <img class="button__bg asset-light" src="/assets/buttons/secondary-light.svg" alt="" aria-hidden="true" />
+            <span class="button__text">机场对比表</span>
+          </a>
+          <a class="button button--large" href="/airports/">
+            <img class="button__bg asset-dark" src="/assets/buttons/secondary-dark.svg" alt="" aria-hidden="true" />
+            <img class="button__bg asset-light" src="/assets/buttons/secondary-light.svg" alt="" aria-hidden="true" />
+            <span class="button__text">品牌目录</span>
+          </a>
+        </div>
+      </div>
+
+      <RecommendationPanel entries={entries} />
+    </div>
+  </div>
+</section>

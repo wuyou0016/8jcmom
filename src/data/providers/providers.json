@@ -1,0 +1,555 @@
+[
+  {
+    "id": "wuyou-lianjie",
+    "slug": "wuyou-lianjie",
+    "name": "无忧链接",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://mtklink.cc/wuyou",
+      "description": "三档套餐（MINI/舒心/省心）的价格和流量在官网首页就能查到，不需要注册账号、不需要猜。放进这轮横向对比，它是少数几家'不用额外验证就能把资费信息填满'的品牌，这也是本站把它排在对比首位的直接原因。",
+      "pricing": [
+        { "name": "MINI", "price": "¥79/年", "billingCycle": "yearly", "trafficQuota": "40GB/月" },
+        { "name": "舒心", "price": "¥19/月起", "billingCycle": "monthly", "trafficQuota": "100GB" },
+        { "name": "省心", "price": "¥33/月起", "billingCycle": "monthly", "trafficQuota": "200GB" }
+      ],
+      "protocols": ["VLESS", "Trojan", "Hysteria2"],
+      "routes": ["IPLC", "IEPL"],
+      "regions": ["香港", "日本", "新加坡", "美国"],
+      "clientSupport": ["Clash 系", "Shadowrocket", "v2rayN"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/wuyoulink",
+        "retrievedAt": "2026-09-25",
+        "claim": "套餐结构、协议、线路信息来自第三方导航站'买梯子导航'，标注为资料已核实"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/wuyoulink",
+        "claim": "优惠码 wuyou666，MINI 档按年计费不参与该优惠",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["资费一栏式公开，对比时不需要额外核实这一项", "协议和客户端覆盖主流选择，兼容性不是短板"],
+      "cons": ["晚高峰速度、丢包率这类动态指标，本站暂无独立测试数据支撑对比"],
+      "suitableFor": ["想先横向摸清行情、不想一家一家注册账号查价的用户"],
+      "notSuitableFor": ["已经有明确速度/稳定性硬指标、只信实测数据的用户"],
+      "summary": "把它放进对比表最大的价值是'基准线'作用——资料最全，方便你用它当参照物，去衡量其他几家资料没那么透明的品牌到底值不值。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论，非独立测速结果" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "weifeng-network",
+    "slug": "weifeng-network",
+    "name": "微风网络",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://wep01.breezenetaff.com/#/?code=XzOO248D",
+      "description": "对比表里唯一需要先过注册墙才能看到套餐详情的一家——这不是说它有问题，只是在'资料获取门槛'这一项上，明显比无忧链接多一道手续，值得在对比时单独标出来。",
+      "pricing": [{ "name": "入门套餐", "price": "约¥11/月起", "billingCycle": "yearly", "trafficQuota": "100GB" }],
+      "routes": ["IEPL（第三方资料）"],
+      "regions": ["香港", "新加坡", "日本", "美国"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/weifeng",
+        "retrievedAt": "2026-09-25",
+        "claim": "官网需注册账号，价格与线路信息来自第三方转述，未经独立核验"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/weifeng",
+        "claim": "测速数据当前标注'整理中'，暂无具体数字",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["IEPL 专线定位在同价位段里不算少见但依然是加分项"],
+      "cons": ["资料获取门槛高于对比表里的大多数品牌，横向比较时信息不对等", "无任何测速数据支撑"],
+      "suitableFor": ["不介意先注册再核实细节的用户"],
+      "notSuitableFor": ["想不注册就能横向比价的用户——这类用户建议先看无忧链接"],
+      "summary": "单看价格区间，微风网络和其他几家入门专线套餐差距不大，真正拉开对比差距的是'资料获取成本'这一项，购买前建议先注册确认一遍。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "firefly",
+    "slug": "firefly",
+    "name": "Firefly",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://vip02.fireflyaff.com/#/?code=Rmc0fhp4",
+      "description": "价格这一项被两个互相独立的第三方来源对上了号（约¥8/月起、60GB），在这轮对比里属于'交叉印证'样本，可信度层级比只有单一来源的品牌更高一档。",
+      "pricing": [{ "name": "入门套餐", "price": "约¥8/月起", "billingCycle": "yearly", "trafficQuota": "60GB" }],
+      "routes": ["IPLC（第三方资料）"],
+      "regions": ["香港", "新加坡", "日本", "台湾"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/firefly",
+        "retrievedAt": "2026-09-25",
+        "claim": "价格被两个独立第三方来源互相印证；官网需注册，本站未通过官方渠道独立核实"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/firefly",
+        "claim": "测速与解锁描述均来自第三方资料，尚未经实测验证",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["价格数据有双来源印证，这一点在对比表里少见，可信度相对靠前"],
+      "cons": ["交叉印证的只有价格，协议/线路细节仍是单一来源，别把'价格可信'等同于'全部资料可信'"],
+      "suitableFor": ["看重资料交叉验证这一项、预算在入门档的用户"],
+      "notSuitableFor": ["需要官方一手测速数据才放心下单的用户"],
+      "summary": "在这批对比对象里，Firefly 的价格可信度是相对突出的一项，但别把这个优势自动脑补到测速和稳定性上——那两项目前还是空白。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "feimao-cloud",
+    "slug": "feimao-cloud",
+    "name": "飞猫云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://flycat1.flycatvipaff.cc/#/?code=sTn3w676",
+      "description": "入门套餐（约¥7/月起、50GB、年付¥84）和协议信息（SS/Trojan/VLESS）同样有双来源互相印证，是这批对比对象里性价比档位最靠前的一家，但仅限于'价格看起来划算'这一项，实际体验没有数据支撑。",
+      "pricing": [{ "name": "入门套餐", "price": "约¥7/月起（年付¥84）", "billingCycle": "yearly", "trafficQuota": "50GB" }],
+      "protocols": ["Shadowsocks（第三方资料）", "Trojan（第三方资料）", "VLESS（第三方资料）"],
+      "routes": ["IPLC（第三方资料）"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/feimao",
+        "retrievedAt": "2026-09-25",
+        "claim": "价格与协议被两个独立第三方来源互相印证，官网需注册，本站未独立核实"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/feimao",
+        "claim": "暂无本站测试数据（丢包率、稳定性等指标均未开始积累）",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["同档位里价格数字最低的之一，协议覆盖也相对齐全"],
+      "cons": ["'价格便宜'和'倍率是否诚实'是两回事，购买前建议先按本站的性价比算法自己核一遍"],
+      "suitableFor": ["预算优先、愿意先小额试用验证的用户"],
+      "notSuitableFor": ["把'价格低'直接等同于'性价比高'、不打算自己核算的用户"],
+      "summary": "单看价格标签，飞猫云在这轮对比里排在前列，但性价比是否真的成立，取决于倍率规则是否诚实——这一项目前没有资料能验证，建议自己先问清楚再下单。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "guangsu-cloud",
+    "slug": "guangsu-cloud",
+    "name": "光速云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://sahude.gsyvipaff.com/#/?code=cD14nZYf",
+      "description": "2020年开业，是这轮对比里运营时间最久的一家。资料本身是从另一个友情链接站转述来的二手信息，可信度层级要单独降一档看待，不能因为'老牌'两个字就默认资料准确。",
+      "pricing": [{ "name": "入门套餐", "price": "年付折算约¥7.5/月", "billingCycle": "yearly", "trafficQuota": "59GB" }],
+      "protocols": ["VLESS（第三方资料）"],
+      "routes": ["IEPL（第三方资料）", "企业级内网专线（第三方资料）"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/guangsuyun",
+        "retrievedAt": "2026-09-25",
+        "claim": "资料转引自另一站点，属于二手转述，本站未做独立核验"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com（转引自第三方站点）",
+        "sourceUrl": "https://maitizi.com/guangsuyun",
+        "claim": "自研客户端为主，第三方客户端需联系客服；据介绍有新人优惠码",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["运营年限在对比样本里最长，某种程度上说明抗风险能力经过了时间检验"],
+      "cons": ["资料是二手转述，信息层级比本站直接查到的其他品牌低一档", "自研客户端为主，兼容性不如支持主流客户端的品牌灵活"],
+      "suitableFor": ["把'运营年限'当作重要参考指标、能接受自研客户端的用户"],
+      "notSuitableFor": ["只用第三方客户端、不想额外联系客服导入订阅的用户"],
+      "summary": "老牌不等于资料可靠——光速云的运营年限是加分项，但这次收录的资料是转引来的二手信息，建议对比时把这一点单独打个折扣。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "xingdaomeng",
+    "slug": "xingdaomeng",
+    "name": "星岛梦",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://kfccbb.xingdaomeng.com/#/?code=yyH19CtQ",
+      "description": "另一份第三方资料给出了相对具体的套餐信息（约¥8/月起、60GB年付，协议SS/Trojan/VLESS），但需要提醒：那份资料里的测速图表被来源站自己标注为'模拟示例'，不是真实测试，本站对比表不采纳那部分。",
+      "pricing": [{ "name": "入门套餐", "price": "约¥8/月起（年付）", "billingCycle": "yearly", "trafficQuota": "60GB" }],
+      "protocols": ["Shadowsocks（第三方资料）", "Trojan（第三方资料）", "VLESS（第三方资料）"],
+      "routes": ["企业级内网专线（第三方资料）"],
+      "regions": ["香港", "日本", "美国", "新加坡"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://jichangcha.co/brands/xingdaomeng/",
+        "retrievedAt": "2026-09-25",
+        "claim": "价格与协议信息来自第三方站点标注的'站长品牌清单'；该站同时展示的测速图表被自己标注为模拟示例数据，本站不采纳"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "机场查 jichangcha.co",
+        "sourceUrl": "https://jichangcha.co/brands/xingdaomeng/",
+        "claim": "2020年开业，套餐含不限时买断选项，优惠码nmw888（新人注册9折）",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["套餐含不限时买断选项，长期低频用户可能划算"],
+      "cons": ["唯一出现过的测速图表已被来源方自己标注为示例数据，等同于没有真实测速参考"],
+      "suitableFor": ["低频使用、看重买断流量包这个选项的用户"],
+      "notSuitableFor": ["需要真实测速数据才决定购买的用户"],
+      "summary": "对比表里容易被'看起来有测速图'误导的一个案例——图是假的，来源方自己都承认了，这也是本站坚持标注数据性质的原因，不然读者根本分不清真假。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "sogo-cloud",
+    "slug": "sogo-cloud",
+    "name": "Sogo云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://wzjc.sogoyunaff.cc/#/?code=k09iVZV5",
+      "description": "对比表里价格档位最高的一个（25元/月、150GB），主打多设备与4K流媒体场景，适不适合取决于你是不是真的需要这个流量体量，不是单纯'贵就不推荐'。",
+      "pricing": [{ "name": "入门套餐", "price": "25元/月", "billingCycle": "monthly", "trafficQuota": "150GB" }],
+      "protocols": ["VLESS（第三方资料）", "Trojan（第三方资料）", "Shadowsocks（第三方资料）"],
+      "regions": ["香港", "日本", "美国", "新加坡"],
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://jichangcha.co/brands/sogo/",
+        "retrievedAt": "2026-09-25",
+        "claim": "价格协议来自第三方站点'站长品牌清单'；同页测速/解锁图表被该站标注为模拟示例，本站不采纳"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "机场查 jichangcha.co",
+        "sourceUrl": "https://jichangcha.co/brands/sogo/",
+        "claim": "该站列出优惠码但'优缺点'小节又写暂无优惠码，两处描述自相矛盾，如实转述不下判断",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["流量档位在对比表里最大，多设备/重度流媒体场景可能划算"],
+      "cons": ["单价明显高于对比表里的其他品牌，轻度用户没必要为用不完的流量多付钱", "来源资料本身有优惠码信息自相矛盾的地方"],
+      "suitableFor": ["多设备家庭、重度流媒体使用者"],
+      "notSuitableFor": ["预算有限、日常用量不大的轻度用户"],
+      "summary": "把它放进对比表主要是当'高配对照组'——如果你的用量撑不起150GB这个档位，这家大概率不是对比后的最优解。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的对比结论" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "kexin-cloud",
+    "slug": "kexin-cloud",
+    "name": "可信云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://work.kosingaff.com/#/?code=epjZ6fDn",
+      "description": "补充进对比表的品牌之一，目前只能确认官网入口可以正常打开，套餐、协议这些具体信息还没有公开资料可查——名字叫'可信'，但目前恰恰是资料可信度最低的一档，这个反差值得提一句。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["套餐、协议、线路信息完全空白，目前没法参与实质性对比"],
+      "suitableFor": ["愿意自己注册确认套餐后再回来对比的用户"],
+      "notSuitableFor": ["希望不用额外核实就能直接对比的用户"],
+      "summary": "收录进来是为了让对比名单覆盖面更完整，但目前信息量不足以支撑任何实质性的横向比较，列在这里更多是'占位'，等资料补上再评估。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "yifan-cloud",
+    "slug": "yifan-cloud",
+    "name": "一翻云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://wzjc.1flyunaff.cc/#/?code=eZbZVKVG",
+      "description": "同样属于目前资料空白的一档，官网能打开，但没有任何公开渠道能查到具体套餐内容，对比表里先占一个位置，等后续有更多信息再补充评估。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["没有任何可参考的套餐、价格、协议信息"],
+      "suitableFor": ["愿意自己先探路、回来分享信息的用户"],
+      "notSuitableFor": ["需要现成对比数据才决定的用户"],
+      "summary": "目前唯一能确认的就是'网站打得开'，其余一律留空，不去猜测填补。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "invisible",
+    "slug": "invisible",
+    "name": "隐形人",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://varnexa.invisibleaff.com/#/?code=sKyE4Ux9",
+      "description": "名字取得挺应景——目前公开资料确实'隐形'，除了官网可以打开之外，没有查到任何套餐细节，暂时无法评估。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["套餐信息完全没有公开资料支撑"],
+      "suitableFor": ["能接受先自行核实再决定的用户"],
+      "notSuitableFor": ["需要现成资料对比的用户"],
+      "summary": "对比表的诚实之处就在于：信息不够就写不够，不会为了填满表格硬编一个'看起来合理'的价格出来。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "edge-node",
+    "slug": "edge-node",
+    "name": "边缘节点",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://work.edgenovaaff.cc/#/?code=79iTqOAr",
+      "description": "品牌名暗示了技术定位（边缘节点部署），但目前没有资料能验证这个定位是否属实，官网可访问，套餐详情待补充。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["品牌名暗示的技术卖点目前没有资料佐证，不能当真"],
+      "suitableFor": ["愿意自己核实品牌名背后是否有实际技术支撑的用户"],
+      "notSuitableFor": ["容易被品牌名字带节奏、不核实细节就下单的用户"],
+      "summary": "提醒一句：机场品牌起名经常带点技术感词汇，名字本身不构成任何资料依据，这家目前的真实情况和名字听起来的样子还没法画等号。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "quanqiu-cloud",
+    "slug": "quanqiu-cloud",
+    "name": "全球云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://sswdh.gcvipaff.com/#/?code=eP0TcOsP",
+      "description": "官网入口确认可用，套餐信息目前没有公开渠道可查，暂列入对比表待补充。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["暂无套餐、协议、价格等任何可对比的信息"],
+      "suitableFor": ["愿意自行核实后再决定的用户"],
+      "notSuitableFor": ["需要现成对比数据的用户"],
+      "summary": "和这批补充品牌的其他几家情况类似——先占个位置，等资料补齐再纳入实质性对比。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "speedworld",
+    "slug": "speedworld",
+    "name": "速界",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://work.speedworldaff.cc/#/?code=Igi3YXQY",
+      "description": "品牌名主打'速度'这个概念，但目前手上没有任何测速数据或者套餐资料能验证这个定位，官网确认可访问。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["品牌名暗示的'速度'卖点，目前没有任何测速数据能验证"],
+      "suitableFor": ["愿意自行测速验证的用户"],
+      "notSuitableFor": ["直接相信品牌名字里带的速度暗示、不核实就下单的用户"],
+      "summary": "'速界'这个名字听起来很唬人，但名字不是测速报告，购买前该测还是要自己测。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "weitu-cloud",
+    "slug": "weitu-cloud",
+    "name": "唯兔云",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://fast.v2yunvipaff.com/#/?code=22gEFKAn",
+      "description": "官网确认可正常访问，套餐、协议、价格目前均无公开资料可查，暂列入对比表待补充。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["暂无任何套餐或价格信息可供对比"],
+      "suitableFor": ["愿意自行核实后再决定的用户"],
+      "notSuitableFor": ["需要现成对比数据的用户"],
+      "summary": "补充名单里资料最薄的一档之一，列出来只是为了让对比表的品牌覆盖面更完整。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  },
+  {
+    "id": "wavenet",
+    "slug": "wavenet",
+    "name": "浪网",
+    "status": "active",
+    "vendor": {
+      "officialWebsite": "https://varnexa.wavenetaff.com/#/?code=XdmseguP",
+      "description": "补充名单里的最后一家，官网确认可访问，套餐信息目前同样是空白，等后续资料补齐再纳入实质对比。",
+      "source": {
+        "type": "third-party",
+        "sourceUrl": "https://maitizi.com/",
+        "retrievedAt": "2026-09-25",
+        "claim": "第三方导航站标注为'资料待核验'，仅确认官网入口可访问"
+      }
+    },
+    "thirdPartyNotes": [
+      {
+        "source": "买梯子导航 maitizi.com",
+        "sourceUrl": "https://maitizi.com/",
+        "claim": "标注为资料待核验，未提供套餐信息",
+        "date": "2026-09-25"
+      }
+    ],
+    "editorial": {
+      "pros": ["官网入口确认可正常访问"],
+      "cons": ["暂无套餐、协议、价格等可对比信息"],
+      "suitableFor": ["愿意自行核实后再决定的用户"],
+      "notSuitableFor": ["需要现成对比数据的用户"],
+      "summary": "和本轮补充的其他几家一样，先如实收录、留白，不用编造的数据凑一个'看起来完整'的对比表。",
+      "source": { "type": "editorial", "retrievedAt": "2026-09-25", "claim": "本站基于第三方资料整理后的判断" }
+    },
+    "lastVerified": "2026-09-25",
+    "createdAt": "2026-09-25",
+    "updatedAt": "2026-09-25"
+  }
+]

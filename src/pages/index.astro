@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/HomeHero.astro';
+import StatsBar from '../components/StatsBar.astro';
+import Top6Grid from '../components/Top6Grid.astro';
+import { isDemoEntry } from '../data/utils/demo-filter';
+import { getPublishableProviders } from '../data/utils/provider-publish-gate';
+import { getRankingPageData } from '../data/utils/ranking-entries';
+import { resolveCanonicalUrl } from '../config/seo';
+
+// 首页展示"当前收录的推荐榜单数量"用的是真实存在的榜单页面数量（综合 + 三个专项），
+// 和 /rankings/ 首页用的是同一份 subRankings 结构，不是凭空写的数字。
+const RANKING_PAGE_COUNT = 4; // overall + best-value + most-stable + for-beginners
+
+const [articles, publishableProviders, { entries: overallEntries }] = await Promise.all([
+  getCollection('articles', ({ id }) => !isDemoEntry(id)),
+  getPublishableProviders(),
+  getRankingPageData('overall'),
+]);
+
+const top6Entries = overallEntries.slice(0, 7);
+
+// TOP6 是首页可见内容里唯一的真实排名列表，ItemList 里只放名称+链接，
+// 不带任何评分/评级字段——当前数据模型里没有可靠的客观评分，写了就是虚构。
+const top6ItemListJsonLd =
+  top6Entries.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '2026机场推荐 综合榜 TOP 7',
+        itemListElement: top6Entries.map((entry, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: entry.providerName,
+          url: resolveCanonicalUrl(`/airports/${entry.providerSlug}/`),
+        })),
+      }
+    : null;
+---
+
+<BaseLayout
+  title="机场横向对比｜机场荟 - 同一套维度并排比较"
+  description="机场荟把不同机场代理服务商的价格、协议、线路和资料透明度放进同一套维度并排呈现，标注每条信息的来源与可信度层级，帮你更快缩小选择范围。"
+  keywords={['机场对比', '机场横向对比', '机场代理', '机场选购', '机场荟']}
+>
+  <HomeHero entries={overallEntries} />
+
+  <div class="container">
+    <StatsBar providerCount={publishableProviders.length} rankingCount={RANKING_PAGE_COUNT} articleCount={articles.length} />
+
+    <section class="section" id="top6">
+      <div class="section__head">
+        <div>
+          <span class="section__eyebrow">综合推荐</span>
+          <h2>TOP 7</h2>
+        </div>
+        <a class="section__more" href="/rankings/">查看机场推荐排行榜 →</a>
+      </div>
+      {
+        top6Entries.length > 0 ? (
+          <Top6Grid entries={top6Entries} />
+        ) : (
+          <div class="empty-state">
+            <p class="empty-state__title">当前暂无符合发布条件的服务商</p>
+            <p>数据不足时我们不会为了凑数而给出排名，等有服务商满足发布门槛后会自动出现在这里。</p>
+          </div>
+        )
+      }
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <span class="section__eyebrow">继续了解</span>
+          <h2>从这里开始</h2>
+        </div>
+      </div>
+      <div class="entry-grid">
+        <a class="entry-card" href="/comparisons/">
+          <span class="entry-card__title">机场对比表</span>
+          <p class="entry-card__description">把几家机场的价格、协议、线路放进同一张表里并排看，差异一眼看清，不用自己一家家翻。</p>
+          <span class="entry-card__cta">查看对比表 →</span>
+        </a>
+        <a class="entry-card" href="/rankings/">
+          <span class="entry-card__title">横向对比榜</span>
+          <p class="entry-card__description">对比样本按统一维度排序，每条排名依据都写清楚是沿用既有判断还是本站补充评估。</p>
+          <span class="entry-card__cta">查看对比榜 →</span>
+        </a>
+        <a class="entry-card" href="/airports/">
+          <span class="entry-card__title">品牌资料库</span>
+          <p class="entry-card__description">收录进对比范围的机场代理服务商，官方信息、第三方资料、编辑判断分开标注。</p>
+          <span class="entry-card__cta">浏览品牌资料 →</span>
+        </a>
+        <a class="entry-card" href="/knowledge/">
+          <span class="entry-card__title">选购决策知识</span>
+          <p class="entry-card__description">对比之前该看懂哪些概念、该怎么算账，知识库从这些实际问题讲起。</p>
+          <span class="entry-card__cta">进入知识库 →</span>
+        </a>
+        <a class="entry-card" href="/troubleshooting/">
+          <span class="entry-card__title">故障排查</span>
+          <p class="entry-card__description">选完、用上之后遇到连接问题，先查这里的排查合集。</p>
+          <span class="entry-card__cta">查看故障排查 →</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  {top6ItemListJsonLd && <script type="application/ld+json" set:html={JSON.stringify(top6ItemListJsonLd)} />}
+</BaseLayout>

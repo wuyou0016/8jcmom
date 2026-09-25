@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "overall",
+    "title": "机场横向对比榜",
+    "description": "本站的机场横向对比榜，人工指定排序（当前尚无本站测速数据支撑自动计算，因此全部条目均为编辑指定排名）。前7名沿用站长在姊妹站已验证的核心合作品牌顺序，第8名起为本站独立补充收录。",
+    "methodology": "本榜单为人工编辑排名（rankOverride），不是基于本站测速数据的自动计算结果——本站目前尚未开始对这些品牌积累测试数据（tests 数据集为空）。第 1-7 位沿用站长在姊妹站机场吧（jc8.mom）已验证过的核心合作品牌顺序（无忧链接首位），代表站长对这批品牌的一贯排序判断，不是本站重新评估的结果；第 8-15 位是本站独立选取、与机场吧收录名单不重合的补充品牌，按资料完整度排列，排名先后不代表额外的推荐强度差异。所有 Provider 的厂商信息均整理自第三方资料（买梯子导航 maitizi.com、机场查 jichangcha.co），标注为第三方资料的内容均未经本站独立核实，请以各品牌官网结算页面实际显示为准。",
+    "criteria": [
+      { "key": "editorial", "label": "编辑指定排名", "weight": 1, "description": "前7位沿用姊妹站已验证顺序，第8位起由本站独立评估补充，均为人工排序，非自动计算得分。" }
+    ],
+    "scoringVersion": "v1.0-editorial-override",
+    "snapshotAt": "2026-09-25",
+    "updatedAt": "2026-09-25",
+    "entries": [
+      {
+        "providerId": "wuyou-lianjie",
+        "reason": "资费公开程度在对比样本里最高，作为横向对比的基准参照品牌，沿用姊妹站已验证的首位排序。",
+        "rankOverride": 1,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的核心合作品牌顺序。"
+      },
+      {
+        "providerId": "weifeng-network",
+        "reason": "沿用姊妹站已验证顺序，第2位。",
+        "rankOverride": 2,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "firefly",
+        "reason": "价格资料有双来源印证，沿用姊妹站已验证顺序，第3位。",
+        "rankOverride": 3,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "feimao-cloud",
+        "reason": "入门套餐价格与协议信息有双来源印证，沿用姊妹站已验证顺序，第4位。",
+        "rankOverride": 4,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "guangsu-cloud",
+        "reason": "运营时间在对比样本里最长，沿用姊妹站已验证顺序，第5位。",
+        "rankOverride": 5,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "xingdaomeng",
+        "reason": "沿用姊妹站已验证顺序，第6位（资料相对具体，但测速图表已被来源方标注为示例数据）。",
+        "rankOverride": 6,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "sogo-cloud",
+        "reason": "沿用姊妹站已验证顺序，第7位（高配大流量档位，作为对比表里的高配对照组）。",
+        "rankOverride": 7,
+        "rankOverrideReason": "沿用站长在姊妹站机场吧已验证的顺序。"
+      },
+      {
+        "providerId": "kexin-cloud",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 8,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "yifan-cloud",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 9,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "invisible",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 10,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "edge-node",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 11,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "quanqiu-cloud",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 12,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "speedworld",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 13,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "weitu-cloud",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 14,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      },
+      {
+        "providerId": "wavenet",
+        "reason": "本站独立补充收录，与机场吧收录名单不重合，目前仅确认官网可访问。",
+        "rankOverride": 15,
+        "rankOverrideReason": "本站独立评估补充，排名不代表额外推荐强度。"
+      }
+    ]
+  }
+]
