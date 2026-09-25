@@ -8,7 +8,7 @@
       "officialWebsite": "https://mtklink.cc/wuyou",
       "description": "三档套餐（MINI/舒心/省心）的价格和流量在官网首页就能查到，不需要注册账号、不需要猜。放进这轮横向对比，它是少数几家'不用额外验证就能把资费信息填满'的品牌，这也是本站把它排在对比首位的直接原因。",
       "pricing": [
-        { "name": "MINI", "price": "¥79/年", "billingCycle": "yearly", "trafficQuota": "40GB/月" },
+        { "name": "MINI", "price": "¥6.6/月", "billingCycle": "yearly", "trafficQuota": "40GB/月" },
         { "name": "舒心", "price": "¥19/月起", "billingCycle": "monthly", "trafficQuota": "100GB" },
         { "name": "省心", "price": "¥33/月起", "billingCycle": "monthly", "trafficQuota": "200GB" }
       ],

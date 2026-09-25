@@ -19,7 +19,7 @@ const priceComparison: Array<{ slug: string; name: string; notes: string[] }> = 
     slug: 'wuyou-lianjie',
     name: '无忧链接',
     notes: [
-      'MINI 档：¥79/年，40GB/月（按年计费，不参与常规折扣）',
+      'MINI 档：¥6.6/月，40GB/月（实际按年一次性付费，不参与常规折扣）',
       '舒心档：¥19/月起，100GB',
       '省心档：¥33/月起，200GB',
       '三档均来自买梯子导航 maitizi.com 的品牌页，标注为资料已核实',
@@ -71,16 +71,12 @@ const budgetTiers = [
     label: '¥8 元/月以内',
     hint: '预算最紧张的档位，本站对比范围里密度最高的价位段',
     providers: [
+      { slug: 'wuyou-lianjie', name: '无忧链接', price: '¥6.6/月起（MINI档，站长确认，40GB）' },
       { slug: 'feimao-cloud', name: '飞猫云', price: '约 ¥7/月起（两来源印证）' },
       { slug: 'guangsu-cloud', name: '光速云', price: '年付折算约 ¥7.5/月（二手转述资料）' },
       { slug: 'firefly', name: 'Firefly', price: '约 ¥8/月起（两来源印证）' },
       { slug: 'xingdaomeng', name: '星岛梦', price: '约 ¥8/月起（第三方资料）' },
     ],
-  },
-  {
-    label: '¥15–20 元/月',
-    hint: '流量档位更大一些，适合日常用量适中的用户',
-    providers: [{ slug: 'wuyou-lianjie', name: '无忧链接', price: '¥19/月起（舒心档，100GB）' }],
   },
   {
     label: '¥20 元/月以上',
